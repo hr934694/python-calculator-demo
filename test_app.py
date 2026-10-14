@@ -1,5 +1,5 @@
 # test_app.py - Tests for our calculator
-from app import add, subtract, multiply, divide
+from app import add, subtract, multiply, divide, power
 
 def test_add():
     assert add(2, 3) == 5
@@ -20,10 +20,14 @@ def test_divide_by_zero():
     except ValueError:
         assert True
 
+def test_power():
+    assert power(2, 3) == 8
+
 if __name__ == "__main__":
     test_add()
     test_subtract()
     test_multiply()
     test_divide()
     test_divide_by_zero()
+    test_power()
     print("All tests passed!")
